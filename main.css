@@ -1,0 +1,44 @@
+h1 {
+    color: rgb(230,  230,  45);
+    font-family: 'Balsamiq Sans', cursive;
+    text-shadow: -4px -4px rgb(230  230  230);
+    text-align: center;
+    padding-top: 7%;
+    font-size: 450%;
+  }
+
+.comingsoon{
+  background-image: url('comingsoon2ok.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 5px;
+  margin-top: 2%;
+  align-content: center;
+  width: auto;
+  height: 100%;
+}
+
+
+  @media only screen and (max-width: 1080px) {
+    h1{
+        font-size: 300%;
+        text-shadow: -4px -4px rgb(230  230  230);
+    }
+
+    .comingsoon{
+      width: 70%;
+      margin-top: auto;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+  }
+  
+
+  @media only screen and (max-width: 850px) {
+
+  }
+
+
+  @media only screen and (max-width: 550px) {
+
+  }
