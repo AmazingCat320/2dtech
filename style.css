@@ -1,0 +1,380 @@
+/* General */
+
+.p-line-break {
+    border-top: solid 1.5px black;
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+
+.p-line-break-borderless {
+    border-top: solid 1.5px black;
+    margin-top: 45px;
+    
+}
+
+/* Post data */
+.post-data-box {
+    font-size: 0.85rem;
+    font-weight: 400;
+    margin: 0;
+    display: flex;
+    justify-content: left;   /* since parent text-align:center won't affect flex children */
+    gap: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.post-date, .post-category {
+    color: #666666;
+}
+
+.post-date {
+    font-weight: 600;
+}
+
+.post-category {
+    font-weight: 600;   /* slightly heavier, to distinguish it from the date */
+}
+
+.post-link {
+    font-size: 0.9vw;
+    text-decoration: none;
+    color: black;
+    align-self: flex-start;
+}
+
+.post-link:hover {
+    color: rgb(239, 26, 26);
+}
+
+
+/* Home page style */
+
+body {
+    background-color: rgb(191, 194, 198);
+}
+
+
+/* Header style */
+
+/* Fonts
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+*/
+
+#typed-text {
+    min-height: 4.5rem;     /* fixed floor — pick a value comfortably bigger than your tallest font needs */
+    line-height: 4.5rem; 
+    text-align: center;
+    /* font-size: 3.3vw; */
+    font-size: clamp(2.6rem, 3.3vw, 4rem);
+    color: #000000;
+    margin: 0;
+}
+
+/* the blinking cursor character */
+#typed-text::after {
+    content: "|";
+    color: rgb(37, 84, 116);
+    animation: blink 0.8s step-end infinite;   
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+
+/* Fonts:
+font-family: "Palette Mosaic", sans-serif;
+font-family: "Lobster", sans-serif;
+font-family: "Barriecito", sans-serif;
+font-family: "Sedgwick Ave Display", cursive;
+*/
+
+/* Style */
+/*.header-title {
+    font-size: 4vw;   
+    text-align: center;
+    
+    font-weight: 400;
+    font-style: normal;
+}*/
+
+.header-title-1 {
+    color: rgb(161, 45, 68);
+}
+
+.header-title-2 {
+    color: rgb(37, 84, 116);
+}
+
+.header-title-3 {
+    color: rgb(161, 45, 68);
+}
+
+.header-title-4 {
+    color: rgb(37, 84, 116);
+    /* darker color: rgb(29, 62, 84); */
+}
+
+
+/* Nav style */
+
+.nav-list {
+    border-top: solid 1.6px black;
+    border-bottom: solid 1.6px black;    
+    justify-content: space-around;
+    display: flex;
+    list-style: none;
+    padding-top: 29px;
+    padding-bottom: 29px;
+}
+
+.nav-link {
+    color: black;
+    text-decoration: none;
+    font-size: 16.5px;
+    letter-spacing: 3.5px;
+    padding: 8px;
+    border-radius: 35px;
+
+    /* Font */
+    /* <weight>: Use a value from 100 to 900 */
+    /* <uniquifier>: Use a unique and descriptive class name */
+
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+.nav-link:hover {
+    border: solid 1px black;
+    background-color: black;
+    color: white;
+}
+
+@media (max-width: 900px) {
+    .nav-list {
+        justify-content: space-between;
+        padding-inline-end: 35px;
+    }    
+
+    .nav-link {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-list {
+        justify-content: center;
+        gap: 12px;
+        padding-inline: 10px;
+        padding-inline-end: 0;
+    }    
+
+    .nav-link {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+}
+
+/* Featured grid */
+
+.featured-grid {
+    padding-inline: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.featured-left {
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+}
+
+.featured-right {
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.featured-post-box {
+    display: flex;
+    gap: 20px;
+}
+
+.featured-post-box img {
+    width: 31%;
+    aspect-ratio: 1/1;
+    flex-shrink: 0;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.featured-left img {
+    width: 100%;
+    height: 52%;
+    min-height: 0;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.featured-left h1, .featured-post-box h1 {
+    /* font-size: 1.4vw; */
+    font-size: clamp(1.3rem, 1.4vw, 1.4vw);
+    margin-bottom: 5px;
+}
+
+.featured-post-box p,a, .featured-left p,a {
+    font-size: 1vw;
+    margin-top: 5px;
+}
+
+.featured-post-box a, .featured-left a {
+    text-decoration: none;
+    color: black;
+}
+
+.featured-post-box a:hover, .featured-left a:hover {
+    color: rgb(239, 26, 26);
+}
+
+/* Responsive */
+@media (max-width: 1480px) {
+    .featured-grid {
+        padding-inline: 10%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .featured-grid {
+        padding-inline: 20px;
+    }
+
+    .featured-post-box p,a, .featured-left p,a {
+        font-size: 1.3vw;
+    }
+}
+
+@media (max-width: 870px) {
+    .featured-grid {
+        padding-inline: 3%;
+        flex-direction: column;
+    }
+
+    .featured-post-box p,a, .featured-left p,a {
+        font-size: 2.5vw;
+    }
+}
+
+
+/* Post box */
+
+.post-box {
+    display: flex;
+    padding-inline: 20%;
+    gap: 20px;
+}
+
+.post-box img {
+    flex: 1;              /* was: width: 33% */
+    aspect-ratio: 3/2;
+    min-width: 0;         /* lets it actually shrink to its fair share, not just grow */
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.post-box-text {
+    flex: 1;              /* was: flex: 0.5 */
+    min-width: 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* centers vertically, since main axis is now column */
+    gap: 8px;  
+}
+
+.post-box-text h1 {
+    font-size: clamp(1.8rem, 1.6vw, 2.1rem);
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.post-box-text p {
+    font-size: clamp(0.85rem, 1.2vw, 1.15rem);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1480px) {
+    .post-box {
+        padding-inline: 10%;
+    }
+}
+
+@media (max-width: 1380px) {
+    .post-box {
+        margin-top: 25px;
+    }    
+}
+
+@media (max-width: 1200px) {
+    .post-box {
+        padding-inline: 20px;
+    }
+
+    .featured-post-box p,a, .featured-left p,a {
+        font-size: 1.3vw;
+    }
+}
+
+@media (max-width: 870px) {
+    .post-box {
+        padding-inline: 3%;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .featured-post-box p,a, .featured-left p,a {
+        font-size: 2.5vw;
+    }
+}
+
+
+/* Footer style */
+
+footer {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-box {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.footer-text {
+    color: black;
+    /* Font */
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+}
